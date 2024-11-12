@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg: #1e1e1e;
+  --main-text: #fffafb;
+  --main-red: #ff4e6b;
+  --main-green: #00cc66;
+  --main-yellow: #ffbb33;
+  --main-blue: #4db4ff;
+  --main-gray: #797979;
+  --second-text: #131315;
+  --second-bg: #131315;
+  --add-event-popup-bg: hsla(348, 100%, 99%, 0.039);
+}
+
+@font-face {
+  font-family: 'Lexend', serif;
+  src: url('/fonts/static/Lexend-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend', serif;
+  src: url('/fonts/static/Lexend-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend', serif;
+  src: url('/fonts/static/Lexend-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend', serif;
+  src: url('/fonts/static/Lexend-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend', serif;
+  src: url('/fonts/static/Lexend-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-size: 16px;
+  color: var(--main-text);
+  background: var(--main-bg);
+  font-family: var(--font-lexend);
+}
+
+.logo {
+  color: var(--main-red);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Custom scrollbar styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--main-bg);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--main-gray);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-gray) var(--main-bg);
+}
+
+/* Base styles for all month-container after elements */
+.month-container:nth-child(1):after,
+.month-container:nth-child(3):after,
+.month-container:nth-child(4):after,
+.month-container:nth-child(6):after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background-color: #ff4e6b29;
+}
+
+/* Specific positioning for each container */
+.month-container:nth-child(1):after,
+.month-container:nth-child(4):after,
+.month-container:nth-child(3):after,
+.month-container:nth-child(6):after {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 95%;
+}
+
+.month-container:nth-child(1):after,
+.month-container:nth-child(4):after {
+  right: 0;
+}
+
+.month-container:nth-child(3):after,
+.month-container:nth-child(6):after {
+  left: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.pop-up {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.add-event-popup input,
+.add-event-popup textarea {
+  background: var(--add-event-popup-bg);
+  color: var(--main-gray);
+  font-weight: 400;
+}
