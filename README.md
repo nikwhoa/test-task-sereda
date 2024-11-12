@@ -1,3 +1,14 @@
+# To run the project:
+On my machine everything works fine in local. But i'm worry about the another environment. So, i've created docker-compose.yml file.
+
+```
+docker compose build
+docker compose up
+```
+
+
+
+
 # Реалізувати календар заходів.
 ## Додаток повинен складатися з однієї сторінки, яка відображає:
 - типи заходів (фільтр)
