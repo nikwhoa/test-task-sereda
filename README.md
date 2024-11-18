@@ -1,5 +1,5 @@
 # To run the project:
-On my machine everything works fine in local. But i'm worry about the another environment. So, i've created docker-compose.yml file.
+On my machine everything works fine in local. But I worry about the another environment. So, i've created docker-compose.yml file.
 
 ```
 docker compose build
